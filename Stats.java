@@ -11,9 +11,11 @@ public static void main(String[] args) {
 		System.out.println("Median equals "+median(ar));
 		System.out.println("Mode =" +mode(a));
 		System.out.println("Standard Dev "+standardDev(ar));
-		System.out.println("Quartile 1: "+Quartile(ar,1));
-		System.out.println("Quartile 2: "+Quartile(ar,2));
-		System.out.println("Quartile 3: "+Quartile(ar,3));
+		// System.out.println("Quartile 1: "+Quartile(ar,1));
+		// System.out.println("Quartile 2: "+Quartile(ar,2));
+		// System.out.println("Quartile 3: "+Quartile(ar,3));
+		System.out.println(quartile1(ar));
+		System.out.println(quartile3(ar));
 	}	
 	public static int max(int[] b) {
 		int max = b[0];
@@ -49,31 +51,50 @@ public static void main(String[] args) {
         	return (ar[middle-1] + ar[middle]) / 2.0;
     	}
 	}
-	public static double Quartile(double[] ar, int qt){
+	public static double quartile1(double[] ar){
 		int q1 = (ar.length+1)/4;
-		int q3 = ((ar.length+1)/4)*3;
-		if (qt==2) {
-		return median(ar);
-		}
-		if (qt==1) {
-			if ((ar.length+1)%4 == 1) {
+		if ((ar.length+1)%4 == 1) {
 				//odd
 				return (ar[q1-1]+ar[q1])/2.0;
 			}else {
 				//even
 				return ar[q1-1];
-			}
-		}if (qt==3) {
-			if ((ar.length+1)%4 == 1) {
+		}
+	}
+	public static double quartile3(double[] ar){
+		int q3 = ((ar.length+1)/4)*3;
+		if ((ar.length+1)%4 == 1) {
 				//odd
 				return (ar[q3-1]+ar[q3])/2.0;
 			}else {
 				//even
 				return ar[q3-1];
 			}
-		}
-		return 0.0;
 	}
+	// public static double Quartile(double[] ar, int qt){
+	// 	int q1 = (ar.length+1)/4;
+	// 	int q3 = ((ar.length+1)/4)*3;
+	// 	if (qt==2) {
+	// 	return median(ar);
+	// 	}
+	// 	if (qt==1) {
+	// 		if ((ar.length+1)%4 == 1) {
+	// 			//odd
+	// 			return (ar[q1-1]+ar[q1])/2.0;
+	// 		}else {
+	// 			//even
+	// 			return ar[q1-1];
+	// 		}
+	// 	}if (qt==3) {
+	// 		if ((ar.length+1)%4 == 1) {
+	// 			//odd
+	// 			return (ar[q3-1]+ar[q3])/2.0;
+	// 		}else {
+	// 			//even
+	// 			return ar[q3-1];
+	// 		}
+	// 	}
+	// }
 
 		public static int mode(int[] a) {
     	int maxValue=0;
