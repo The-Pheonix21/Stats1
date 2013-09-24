@@ -1,21 +1,21 @@
 class Stats {
 public static void main(String[] args) {
-		int[] c = {1,76,0,0,0,0};
-		int[] b = {5,4,63,45,6};
-		int[] ab = {1,2,3,4,5,6};
-		int[] a = {1,2,3,4,5,6,7,8,9,10};
-		double[] ar = {1.1,1.3,1.6,2.2,5.2,6.1,7.5,8.0};
-		System.out.println("max " +max(b));
-		System.out.println("min: " +min(b));
-		System.out.println("mean is " +mean(ar));
-		System.out.println("Median equals "+median(ar));
-		System.out.println("Mode =" +mode(a));
-		System.out.println("Standard Dev "+standardDev(ar));
+		// int[] c = {1,76,0,0,0,0};
+		// int[] b = {5,4,63,45,6};
+		// int[] ab = {1,2,3,4,5,6};
+		// int[] a = {1,2,3,4,5,6,7,8,9,10};
+		// double[] ar = {1.1,1.3,1.6,2.2,5.2,6.1,7.5,8.0};
+		// System.out.println("max " +max(b));
+		// System.out.println("min: " +min(b));
+		// System.out.println("mean is " +mean(ar));
+		// System.out.println("Median equals "+median(ar));
+		// System.out.println("Mode =" +mode(a));
+		// System.out.println("Standard Dev "+standardDev(ar));
 		// System.out.println("Quartile 1: "+Quartile(ar,1));
 		// System.out.println("Quartile 2: "+Quartile(ar,2));
 		// System.out.println("Quartile 3: "+Quartile(ar,3));
-		System.out.println(quartile1(ar));
-		System.out.println(quartile3(ar));
+		// System.out.println(quartile1(ar));
+		// System.out.println(quartile3(ar));
 	}	
 	public static int max(int[] b) {
 		int max = b[0];
