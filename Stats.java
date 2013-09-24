@@ -112,7 +112,7 @@ public static void main(String[] args) {
     	}
     	return maxValue;
 	}
-	public static double standardDev(double[] ar){
+	public static double standardDeviation(double[] ar){
 		double temp=0;
 		double mean=mean(ar);
 		for (int i=0;i<ar.length;i++) {
