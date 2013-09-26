@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Stats {
 public static void main(String[] args) {
 		// int[] c = {1,76,0,0,0,0};
